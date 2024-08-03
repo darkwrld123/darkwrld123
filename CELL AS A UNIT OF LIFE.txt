@@ -1,0 +1,76 @@
+
+import turtle
+
+# Set up the screen
+win = turtle.Screen()
+win.bgcolor("white")
+
+# Create a turtle to draw the flag
+flag = turtle.Turtle()
+flag.speed(1)
+
+# Draw the flag
+flag.penup()
+flag.goto(-150, 100)
+flag.pendown()
+flag.fillcolor("red")
+flag.begin_fill()
+for _ in range(2):
+    flag.forward(300)
+    flag.right(90)
+    flag.forward(200)
+    flag.right(90)
+flag.end_fill()
+
+# Draw the white stripes
+flag.penup()
+flag.goto(-150, 50)
+flag.pendown()
+flag.fillcolor("white")
+flag.begin_fill()
+for _ in range(2):
+    flag.forward(300)
+    flag.right(90)
+    flag.forward(50)
+    flag.right(90)
+flag.end_fill()
+
+flag.penup()
+flag.goto(-150, 0)
+flag.pendown()
+flag.fillcolor("white")
+flag.begin_fill()
+for _ in range(2):
+    flag.forward(300)
+    flag.right(90)
+    flag.forward(50)
+    flag.right(90)
+flag.end_fill()
+
+# Draw the blue rectangle
+flag.penup()
+flag.goto(-150, 100)
+flag.pendown()
+flag.fillcolor("blue")
+flag.begin_fill()
+for _ in range(2):
+    flag.forward(150)
+    flag.right(90)
+    flag.forward(200)
+    flag.right(90)
+flag.end_fill()
+
+# Draw the white stars
+flag.penup()
+flag.goto(-125, 175)
+flag.pendown()
+flag.fillcolor("white")
+flag.begin_fill()
+for _ in range(5):
+    flag.forward(25)
+    flag.right(144)
+flag.end_fill()
+
+# Hide the turtle and close the window
+flag.hideturtle()
+turtle.done()
